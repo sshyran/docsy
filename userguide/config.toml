@@ -10,9 +10,15 @@ enableMissingTranslationPlaceholders = true
 
 enableRobotsTXT = true
 
-# set docsy as theme, either locally or as hugo module
-theme = ["docsy"]
-# theme = ["github.com/google/docsy", "github.com/google/docsy/dependencies"]
+# pull in docsy theme as hugo module
+[module]
+[[module.imports]]
+path = "github.com/google/docsy"
+[[module.imports]]
+path = "github.com/google/docsy/dependencies"
+
+
+#theme = ["github.com/google/docsy", "github.com/google/docsy/dependencies"]
 
 # Will give values to .Lastmod etc.
 enableGitInfo = true
